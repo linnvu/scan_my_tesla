@@ -1,0 +1,26 @@
+.navbar {
+    display: flex; /* Makes the nav a flex container */
+    padding: 1rem 2rem; 
+    padding-top: 2%;  
+
+}
+
+.navbar:hover {
+    background-color: pink;
+}
+
+.navButton {
+    margin-left: 1rem;
+    background-color: aqua;
+    padding: 0.5rem 1rem;
+    border: none;
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    margin-right: auto;          /* Pushes the rest of the nav items to the right */
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
