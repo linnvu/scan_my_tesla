@@ -1,21 +1,60 @@
-.navbar {
-    display: flex; /* Makes the nav a flex container */
-    padding: 1rem 2rem; 
-    padding-top: 2%;  
 
+* {
+  margin: 0; /* removes weird gap between the picture and the top*/
+  padding: 0;
 }
 
+.navbar {
+    position: fixed;           /* Stay at the top */
+    top: 0;
+    width: 100%;               /* Full width */
+    z-index: 1000;             /* Stay on top */
+    display: flex;
+    padding-top: 2%;
+    
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+
 .navbar:hover {
-    background-color: pink;
+    background-color: white;
+    color: black;
+}
+
+.navbar:hover .navButton {
+  color: black;
 }
 
 .navButton {
     margin-left: 1rem;
-    background-color: aqua;
     padding: 0.5rem 1rem;
     border: none;
     text-decoration: none;
-    color: black;
+    color: white;
+}
+
+.navbar:hover .navButton:hover { /* overrides so the text is not black when hovered */
+  color: #b30000;
+}
+
+.navButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color:#b30000;
+  transition: width 0.4s ease-out;
+}
+
+
+.navButton:hover {
+    font-size: 18px;
+    color: #b30000;
+    text-decoration: underline;
+    transition: text-decoration 0.3s ease;
 }
 
 .logo {
@@ -23,4 +62,9 @@
     font-weight: bold;
     text-decoration: none;
     color: black;
+    margin-left: 2%;
+}
+
+.logo:hover {
+    font-size: 18px;
 }

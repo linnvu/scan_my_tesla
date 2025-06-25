@@ -1,14 +1,12 @@
-
-import './App.css';
+import './css/index.css'
 import './css/navbar.css'
 import Navbar from './components/navbar'
-import Index from './components/index';
+import Index from './components/index'
 
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="App" >
       <Navbar />
       <Index />
     </div>    
